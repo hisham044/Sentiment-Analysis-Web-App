@@ -133,7 +133,7 @@
     </script>
 </head>
 
-<body class="text-center">
+<body>
     <div class="chatwindow receive-page">
         <div class="message-list">
             <h2>Receive Page</h2>
@@ -148,6 +148,22 @@
             <p id="sentiment"></p>
             <p>Probability: <span id="probability"></span></p>
         </div>
+    </div>
+
+    <div class="qr-code-container">
+        <div id="qrcode"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+        <script>
+            var currentURL = window.location.href;
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: currentURL + "/send",
+                width: 250,
+                height: 250,
+                colorDark: "#000",
+                colorLight: "#fff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        </script>
     </div>
 </body>
 
