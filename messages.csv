@@ -1,0 +1,56 @@
+id,msg,sentiment,probability,timestamp
+1,hola,Positive,0.92,2024-01-19 04:36:00
+2,worst,Positive,0.93,2024-01-19 04:36:05
+3,bad,Positive,0.62,2024-01-19 04:36:09
+4,good,Positive,0.52,2024-01-19 04:36:18
+5,best,Negative,0.93,2024-01-19 04:36:26
+6,hell,Positive,0.69,2024-01-19 04:36:31
+7,good,Negative,0.89,2024-01-19 04:37:17
+8,good,Negative,0.88,2024-01-19 04:37:26
+9,good,Negative,21.99999988079071,2024-01-19 04:37:45
+10,bad,Negative,20.999999344348907,2024-01-19 04:37:50
+11,hell,Negative,20.999999344348907,2024-01-19 04:37:57
+12,worst,Negative,18.99999976158142,2024-01-19 04:38:02
+13,What the hell management is doing?,Negative,20.999999344348907,2024-01-19 04:38:23
+14,such a best good movie I have ever seen,Positive,86.00000143051147,2024-01-19 04:38:38
+15,omg! i hate this movie,Negative,20.999999344348907,2024-01-19 04:38:50
+16,will definitely give this movie a try.,Negative,30.000001192092896,2024-01-19 04:39:04
+17,such a good movie that will watch again,Negative,34.99999940395355,2024-01-19 04:39:19
+18,i loved the movie so much. Literally the best movie i have ever seen,Positive,93.00000071525574,2024-01-19 04:39:51
+19,Such a good movie,Negative,27.000001072883606,2024-01-19 04:46:28
+20,Such a good movie,Negative,27.000001072883606,2024-01-19 04:46:46
+21,This is such a good movie that I loved it. Will surely watch it again.,Positive,68.99999976158142,2024-01-19 04:47:09
+22,"I hate this movie so much. Bad, will never ever watch this again.",Negative,9.000000357627869,2024-01-19 04:47:39
+23,Such a shitty movie. I won't recommend this to anyone fr.,Negative,25.999999046325684,2024-01-19 05:11:22
+24,OMG! I loved the movie so much. Best I have ever seen,Positive,89.99999761581421,2024-01-19 05:11:42
+25,"hey, a sample word, curious how its accuracy will go. Will it be neutral?",Negative,34.99999940395355,2024-01-19 06:05:49
+26,"such a trach, seriously? who makes such kind of movie. Can anyone even think of it",Negative,31.00000023841858,2024-01-19 06:06:25
+27,"Oh my god! this is like, i dont have words how should i express my feelings here. OMGG!!!",Negative,25.999999046325684,2024-01-19 06:06:56
+28," Oh my god! this is like, i dont have words how should i express my feelings here, such a woww! Best movie i have ever seen",Negative,46.99999988079071,2024-01-19 06:07:22
+29,Literally the best movie i have ever seen. I will definately give this movie one more shot.,Positive,88.99999856948853,2024-01-19 06:07:53
+30,Hey how are you doing buddy? All good? Dont worry ehsinsi susiks,Negative,28.999999165534973,2024-01-19 09:50:56
+31,"Hello, hope you are doing good. Have a nice day. Best wishes.",Positive,70.99999785423279,2024-01-19 09:53:25
+32,Such a worst movie. Never ever recommending to anyone else. Hated it,Negative,0.9999999776482582,2024-01-19 09:58:35
+33,"Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",Positive,50.999999046325684,2024-01-19 10:02:24
+34,"Geyyy, dample 53sty hriiveh jorlvsh jrogeefjs hodobstid yokbegei jodhrvbd hdiiebheh teijsbfu yorobsgej uofkevs",Negative,21.99999988079071,2024-01-19 10:23:39
+35,"The Helicopter Landing Officer, also known as HLO is a person on an offshore facility responsible for landing incoming helicopters safely.",Positive,60.00000238418579,2024-01-19 10:47:27
+36,"The Helicopter Landing Officer, also known as HLO is a person on an offshore facility responsible for landing incoming helicopters safely.",Positive,60.00000238418579,2024-01-19 10:52:50
+37,"The Helicopter Landing Officer, also known as HLO is a person on an offshore facility responsible for landing incoming helicopters safely.",Positive,60.00000238418579,2024-01-19 10:57:28
+38,"The Helicopter Landing Officer, also known as HLO is a person on an offshore facility responsible for landing incoming helicopters safely.",Positive,60.00000238418579,2024-01-19 10:57:35
+39,"The Helicopter Landing Officer, also known as HLO is a person on an offshore facility responsible for landing incoming helicopters safely.",Positive,60.00000238418579,2024-01-19 10:57:36
+40,"The Helicopter Landing Officer, also known as HLO is a person on an offshore facility responsible for landing incoming helicopters safely.",Positive,60.00000238418579,2024-01-19 10:57:37
+41,"The Helicopter Landing Officer, also known as HLO is a person on an offshore facility responsible for landing incoming helicopters safely.",Positive,60.00000238418579,2024-01-19 10:57:38
+42,"The Helicopter Landing Officer, also known as HLO is a person on an offshore facility responsible for landing incoming helicopters safely.",Positive,60.00000238418579,2024-01-19 10:57:39
+43,"The Helicopter Landing Officer, also known as HLO is a person on an offshore facility responsible for landing incoming helicopters safely.",Positive,60.00000238418579,2024-01-19 10:57:40
+44,"Orchestrate every customer interaction across channels seamlessly with NICE CXone, all on a cloud-native platform that scales securely",Negative,44.999998807907104,2024-01-19 11:03:59
+45,such a good movie. I liked it very much. Will surely recommend watching it again.,Positive,77.99999713897705,2024-01-19 11:04:03
+46,"""Hello"" is a word that is commonly used as a greeting, it does not have any full form. ",Negative,30.000001192092896,2024-01-19 11:05:03
+47,"Hello, it's me I was wondering if after all these years you'd like to meet To go over everything",Negative,40.99999964237213,2024-01-19 11:05:18
+48,"Thanks for the order, have a nice day, or See you next week",Positive,80.0000011920929,2024-01-19 11:05:44
+49,He was very good at his work. I'm not very good at singing. He is one of the best players in the world. I always played football with my older brother because I was good for my age.,Positive,97.00000286102295,2024-01-19 11:09:10
+50,This was a super movie. It was such a meaningful story.,Negative,34.99999940395355,2024-01-19 11:53:37
+51,Tammy ankur vishrut,Negative,47.999998927116394,2024-01-19 11:56:38
+52,"It is an efficient thrill ride, running about 90 minutes, with every moment used as effectively as possible.",Positive,57.999998331069946,2024-01-19 11:59:52
+53,"A look back at Coppola's underrated musical, returning this week in a restored re-release.",Positive,57.999998331069946,2024-01-19 12:00:10
+54,Too many characters are too sketchy and with nowhere near enough to make one want to endear to them. ,Negative,28.999999165534973,2024-01-19 12:00:55
+55,Their annoying and illogical decision making and behaviours frustrates. Making the film feel bland and forgettable with not enough heart put into it.,Negative,0.9999999776482582,2024-01-19 12:01:07
