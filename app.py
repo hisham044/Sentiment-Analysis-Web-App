@@ -1,16 +1,22 @@
-# app.py
 import random
 import csv
 from flask import Flask, render_template
 from flask_socketio import SocketIO
 from datetime import datetime
+import socket
+from keras.preprocessing import text, sequence
+from process import denoise_text
+import joblib
+from keras.models import load_model
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
 
 socketio = SocketIO(app, cors_allowed_origins="*")
+model = load_model('model/model_dir.h5')
+tokenizer = joblib.load('model/tokenizer_joblib.joblib')
 
-# Load messages from CSV file on server start
+
 def load_messages():
     try:
         with open('messages.csv', 'r', newline='', encoding='utf-8') as file:
@@ -29,11 +35,20 @@ def save_messages():
         writer.writeheader()
         writer.writerows(messages)
 
-def get_sentiment_probability():
-    sentiments = ['Positive', 'Neutral', 'Negative']
+def get_sentiment_probability(inp_text):
+    inp_text = denoise_text(inp_text)
+    tokenized_test = tokenizer.texts_to_sequences([inp_text])
+    inp_text = sequence.pad_sequences(tokenized_test, maxlen=300)
+    pred = model.predict(inp_text)
+    sentiments = None
+    if(pred>=0.5):
+        sentiments="Positive"
+    else:
+        sentiments = "Negative"
+    print(sentiments,"-----",pred)
     return {
-        'sentiment': random.choice(sentiments),
-        'probability': round(random.uniform(0.5, 1.0), 2)
+        'sentiment': sentiments,
+        'probability': round(pred[0][0], 2)
     }
 
 @app.route('/')
@@ -49,21 +64,20 @@ def send():
 @socketio.on('text', namespace='/chat')
 def text(message):
     global messages
-    # Check if the message content is not empty or just spaces
-    if message['msg'].strip():
-        sentiment_probability = get_sentiment_probability()
+    if message['msg'].strip() and len(message.get('msg', '').split()) >= 10:
+        sentiment_probability = get_sentiment_probability(message['msg'])
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         new_message = {
             'id': len(messages) + 1,
             'msg': message['msg'],
             'sentiment': sentiment_probability['sentiment'],
-            'probability': sentiment_probability['probability'],
-            'timestamp': timestamp  # Add timestamp to the message
+            'probability': (sentiment_probability['probability']*100),
+            'timestamp': timestamp
         }
         messages.append(new_message)
         socketio.emit('message', new_message, namespace='/chat')
-        save_messages()  # Save messages to CSV after adding a new message
+        save_messages()
 
 
 if __name__ == '__main__':
-    socketio.run(app)
+    socketio.run(app, host='0.0.0.0', port=0, allow_unsafe_werkzeug=True)
