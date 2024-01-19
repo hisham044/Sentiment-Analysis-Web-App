@@ -7,7 +7,6 @@ body {
 body {
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 40px;
     background-color: #282c35; /* Dark background */
     color: #ffffff; /* White text */
@@ -35,13 +34,19 @@ h2 {
 }
 
 .receive-page {
-    background-color: #424a61; /* Darker blue background for receive page */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px; /* Add max-width to limit the width of the receive page */
+  margin: auto; /* Center the receive page horizontally */
 }
+
 
 .message-list {
   flex: 1;
   overflow-y: auto;
-  max-height: 400px; /* Set max height for the message container */
+  max-height: 400px;
 }
 
 .auto-select {
@@ -49,10 +54,11 @@ h2 {
 }
 
 .selected-message {
-    padding: 20px;
-    background-color: #4f5772; /* Dark blue background for selected message */
-    border-radius: 8px;
-    margin-top: 20px;
+  padding: 20px;
+  background-color: #4f5772;
+  border-radius: 8px;
+  margin-top: 20px;
+  max-width: 100%; /* Ensure the content box doesn't exceed the width */
 }
 
 .message-container {
@@ -84,8 +90,6 @@ h2 {
   font-size: 12px; /* Smaller font size for timestamp */
 }
 
-/* ... (previous styles) ... */
-
 .sentiment {
   font-weight: bold;
   display: inline-block;
@@ -106,4 +110,33 @@ h2 {
 .sentiment.emoji {
   font-size: 20px; /* Adjust the font size of the emoji */
   margin-right: 5px;
+}
+
+.input-container {
+  text-align: center; /* Center the input field on mobile */
+}
+
+#text {
+  max-width: 100%; /* Set maximum width for better mobile responsiveness */
+}
+
+#send {
+  width: 100%; /* Make the button full width on mobile */
+}
+
+/* Additional styles for better qr code */
+.qr-code-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-right: auto; /* Push the QR code to the left */
+  margin-left: auto; /* Ensure it's centered horizontally */
+}
+
+/* Additional styles for better visibility of QR code */
+#qrcode {
+  background-color: #fff;
+  padding: 20px; /* Increase padding for better spacing */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px; /* Add margin to separate the QR code from the messages */
 }
